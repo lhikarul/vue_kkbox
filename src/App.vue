@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header>
-        <router-link to="/">KKBOX排行榜</router-link>
+        <router-link to="/">首頁</router-link>
     </header>
     <router-view/>
     <YTplayer :YTid="youtubeID"></YTplayer>

@@ -43,6 +43,7 @@
 </template>
 
 <script>
+import {mapActions} from 'vuex';
 
 import {playerListRequest,YTSearchRequest} from 'api/api';
 import {playerListMixins} from 'util/mixins';
@@ -56,15 +57,24 @@ export default {
         Loading
     },
     methods: {
+        ...mapActions([
+            'getToken'
+        ]),
         async getPlayerList () {
+            
             const playerlsit_id = this.$route.params.playerlist_id;
 
             this.axiosConfig.params = {
                 territory: this.territory
             }
+            
+            try {
+                const res = await playerListRequest(playerlsit_id,this.axiosConfig);
+            }catch (error) {
+                console.log('e ',error)
+            }
 
             const res = await playerListRequest(playerlsit_id,this.axiosConfig);
-
             this.setPlayerList(res.data);
         },
         handleData (e,signer,song,index) {
@@ -80,7 +90,8 @@ export default {
             }
         }
     },
-    created () {
+    async created () {
+        await this.getToken();
         this.getPlayerList();
     }
 }
