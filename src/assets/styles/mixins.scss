@@ -1,0 +1,24 @@
+@mixin size($w,$h:$w,$bdrs:0) {
+  width: $w;
+  height: $h;
+  border-radius: $bdrs;
+}
+
+@mixin abpos($l:initial,$t:initial){
+  position: absolute;
+  left: $l;
+  top: $t;
+}
+
+@mixin flex($j:center,$a:center) {
+    display: flex;
+    justify-content: $j;
+    align-items: $a;
+}
+
+%textEllipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
