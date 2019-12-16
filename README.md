@@ -9,6 +9,8 @@ npm run build
 ```
 ## 介紹
 
+### [作品DEMO](https://lhikarul.github.io/vue_kkbox/#/rank)
+
 #### 使用技術: Vue、Vuex、Vue-router
 
 #### 整合第三方API：
