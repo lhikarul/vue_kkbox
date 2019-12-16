@@ -1,3 +1,12 @@
+## development
+```
+npm install, npm run serve
+```
+## production
+```
+npm run build
+
+```
 ## 介紹
 
 #### 使用技術: Vue、Vuex、Vue-router
