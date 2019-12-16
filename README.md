@@ -1,38 +1,20 @@
-# vue_kkbox
-
-## development
-```
-npm install, npm run serve
-
-```
-## production
-```
-npm run build
-```
-
-## Project setup
-```
-npm install
-
-```
 ## 介紹
 
-使用技術: Vue、Vuex、Vue-router
+#### 使用技術: Vue、Vuex、Vue-router
 
-整合第三方API：
+#### 整合第三方API：
 
-1.KKBOX open API
+    1.KKBOX open API
 
-2.Youtube Data API
+    2.Youtube Data API
 
-第三方套件：
+#### 第三方套件：
 
-youtube-iframe: 客製化播放器，如播放、暫停、下一首歌曲。
+1. youtube-iframe: 客製化播放器，如播放、暫停、下一首歌曲。
 
-css樣式:
-單獨抽離 Bootstrap 4 格線系統，並客製化其模組。
+2. css樣式: 單獨抽離 Bootstrap 4 格線系統，並客製化其模組。
 
-## 心得
+#### 心得
 
 此作品主要為練習 API 的串接及整合，透過 KKBOX API 拿到排行榜的相關歌手及歌曲資訊，再藉由 Youtube Search API 取得對應的 video ID，通過 youtube-iframe 嵌入 video 至網頁。
 
@@ -42,8 +24,4 @@ API 統一使用 axois.create 方法管理，確保 API 的來源都是同一個
 
 我現在都傾向於使用 Bootstrap 4 的格線系統實作 RWD，之前有稍微研究一下源碼，並不是很難，間距、比例都能夠透過變數直接更改，也能夠直接添加自己需要的斷點，這使得開發的速度能夠變得更快。
 
-
-
-
-
-
+最後使用 https://cors-anywhere.herokuapp.com/ 直接解決跨域的問題，簡單好用~
